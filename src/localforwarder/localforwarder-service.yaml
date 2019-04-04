@@ -1,20 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  creationTimestamp: null
   labels:
     k8s-app: localforwarder
   name: localforwarder
-  selfLink: /api/v1/namespaces/default/services/localforwarder
 spec:
   ports:
-  - name: tcp-60000-55678-b95wt
-    port: 60000
+  - name: opencensus
+    port:  55678
     protocol: TCP
-    targetPort: 55678
   selector:
     k8s-app: localforwarder
-  sessionAffinity: None
-  type: ClusterIP
-status:
-  loadBalancer: {}
+  
