@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    k8s-app: localforwarder
+  name: localforwarder
+spec:
+  ports:
+  - name: opencensus
+    port:  55678
+    protocol: TCP
+  selector:
+    k8s-app: localforwarder
+  
