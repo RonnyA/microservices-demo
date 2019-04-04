@@ -31,7 +31,9 @@ spec:
       containers:
       - env:
         - name: APPINSIGHTS_INSTRUMENTATIONKEY
-          value: 276e3125-267e-46e8-852a-53825e1bbe6e
+          value: <KEY>
+        - name: APPINSIGHTS_LIVEMETRICSSTREAMAUTHENTICATIONAPIKEY
+          value: <KEY>
         image: k8ronny.azurecr.io/demo/localforwarder
         imagePullPolicy: Always
         name: localforwarder
